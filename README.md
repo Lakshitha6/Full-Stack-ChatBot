@@ -6,6 +6,12 @@ Project overview
 - Summary: A full-stack example that demonstrates a Retrieval-Augmented Generation (RAG) system implemented as multiple collaborating Python agents in the `backend` and a React UI in the `frontend`.
 - Purpose: Orchestrate agents that retrieve knowledge from a local Chroma vector store and generate or post process responses via LLM(s), exposed through a web chat UI.
 
+Project Architecture
+--------------------
+
+<img width="1024" height="1536" alt="Architechture" src="https://github.com/user-attachments/assets/97811147-3a70-4371-b95c-09febc09782e" />
+
+
 Repository structure
 --------------------
 - `backend/`: Python agents and server entrypoint. Key files: `backend/main.py`, `backend/rag_agent.py`, `backend/supervisor_agent.py`, `backend/toolcalling_agent.py`, and `.env` for secrets.
