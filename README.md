@@ -9,7 +9,8 @@ Project overview
 Project Architecture
 --------------------
 
-<img width="1024" height="1536" alt="Architechture" src="https://github.com/user-attachments/assets/97811147-3a70-4371-b95c-09febc09782e" />
+<img width="1024" height="1536" alt="Architecture" src="https://github.com/user-attachments/assets/d3d558e3-8bd6-45af-9644-b44d308b056b" />
+
 
 
 Repository structure
