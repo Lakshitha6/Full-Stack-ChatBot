@@ -3,8 +3,9 @@ from dotenv import load_dotenv, find_dotenv
 from pydantic import SecretStr
 from langchain_groq import ChatGroq
 from langchain_core.messages import AIMessage
-from langchain_community.tools import WikipediaQueryRun, TavilySearchResults
+from langchain_community.tools import WikipediaQueryRun
 from langchain_community.utilities import WikipediaAPIWrapper
+from langchain_tavily import TavilyResearch
 from langgraph.graph import StateGraph, START, END
 from langgraph.graph.message import add_messages
 from langgraph.prebuilt import ToolNode, tools_condition
@@ -30,13 +31,13 @@ llm = ChatGroq(
 wiki_tool = WikipediaQueryRun(
     api_wrapper=WikipediaAPIWrapper(wiki_client=None, top_k_results=1, doc_content_chars_max=300)
 )
-tavily_web_tool = TavilySearchResults(
+tavily_web_tool = TavilyResearch(
     tavily_api_key=tavily_api_key,
     name="tavily_web_tool"  # ✅ Required
 )
 
 # For YouTube search only
-tavily_youtube_tool = TavilySearchResults(
+tavily_youtube_tool = TavilyResearch(
     tavily_api_key=tavily_api_key,
     include_domains=["youtube.com"],
     name="tavily_youtube_tool" 

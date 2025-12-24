@@ -1,11 +1,11 @@
 import os
 from langchain_huggingface import HuggingFaceEmbeddings
-from langchain.schema.output_parser import StrOutputParser
+from langchain_core.output_parsers import StrOutputParser
 from langchain_community.document_loaders import PyPDFLoader
 from langchain_text_splitters import  RecursiveCharacterTextSplitter
 from langchain_chroma import Chroma
-from langchain.prompts import ChatPromptTemplate
-from langchain.schema.runnable import RunnablePassthrough
+from langchain_core.prompts import ChatPromptTemplate
+from langchain_core.runnables import RunnablePassthrough
 from langchain_groq import ChatGroq
 from dotenv import load_dotenv
 from pydantic import SecretStr
